@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAPSTONEJP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero">
+
+        <video autoplay loop muted plays-inline class="back-video">
+            <source src="images/Last.mp4" type="video/mp4">
+        </video>
+    
+        <nav>
+            <img src="images/logo1.png" class="logo">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">WHEN</a></li>
+                <li><a href="#">CONTACT US</a></li>
+                <li>
+                    <button id="sound-btn">
+                        <img src="images/sound-icon.png" alt="Sound" class="sound-icon">
+                    </button>
+                </li>
+            </ul>
+        </nav>
+        <!-- 시간 텍스트 포함 -->
+        <div class="time-wrapper">
+            <!-- 날짜: 가운데 위 -->
+            <div class="date-row" id="current-date">2025. 06. 12.</div>
+
+             <!-- 시계 + 국가명 + dash -->
+            <div class="time-row">
+                <div class="time-box">
+                    <div class="label">QATAR</div>
+                    <div class="time" id="qatar-time">00:00</div>
+                </div>
+
+                <div class="dash">---</div>
+
+                <div class="time-box">
+                    <div class="label">KR</div>
+                    <div class="time" id="korea-time">00:00</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 한국 영상 설명 팝업 -->
+        <div id="video-overlay" class="hidden">
+            <button id="close-video">×</button>
+            <div id="video-box">
+                <video id="korea-video" controls>
+                    <source src="images/teaser.mp4" type="video/mp4">
+
+                </video>
+            </div>
+        </div>
+
+
+
+        <!-- 배경 음악 -->
+        <audio id="bg-music" loop>
+            <source src="audio/background.mp3" type="audio/mp3">
+        </audio>
+
+        <div class="btns">
+            <button id="memory-btn">The Memory Archieve</button>
+            <button id="korea-video-btn">Teaser</button>
+
+        </div>
+
+        <!-- 전체 오버레이 + 이미지 그리드 포함 -->
+        <div id="memory-overlay" class="hidden">
+            <button id="close-memory">×</button>
+            <div id="memory-popup" class="memory-grid">
+                <img src="images/m1.png">
+                <img src="images/m2.png">
+                <img src="images/m3.png">
+                <img src="images/m4.png">
+                <img src="images/m5.png">
+                <img src="images/m6.png">
+                <img src="images/m7.png">
+                <img src="images/m8.png">
+                <img src="images/m9.png">
+            </div>
+        </div>
+
+        <!-- 이미지 확대 + 설명 팝업 -->
+        <div id="image-popup" class="hidden">
+            <button id="close-image-popup">×</button>
+            <img id="popup-image" src="" alt="preview">
+            <p id="image-description">설명 텍스트</p>
+        </div>
+
+
+
+        <script src="script.js"></script>
+    </div>
+    
+</body>
+</html>
